@@ -1,0 +1,117 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-image: url('background.jpg'); /* Background Image */
+    background-size: cover;
+    background-position: center;
+    background-color: #AFD2E9;
+}
+
+h1 {
+    margin-top: 10px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Game Board Styling */
+.container {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Game {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5vmin;
+    width: 60vmin;
+    height: 60vmin;
+}
+
+.box {
+    border-radius: 0.75rem;
+    border: none;
+    height: 18vmin;
+    width: 18vmin;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+    font-size: 10vmin;
+    color: rgb(85, 83, 72);
+    /* background-color: rgb(39, 54, 49); */
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    font-weight: 600;
+    
+    /*  Same Image for All Boxes */
+    background-image: url('box-image.jpg'); /* Replace with your image */
+    background-size: contain; /* Ensures image fits inside the box */
+    background-position: center;
+    background-repeat: no-repeat; /* Prevents image from repeating */
+}
+
+/* Hover & Click Effects */
+.box:hover {
+    transform: scale(1.1);
+}
+
+.box:active {
+    transform: scale(0.9);
+}
+
+/* Highlight Winning Boxes */
+.winning-box {
+    animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+    0% { background-color: #28a745; box-shadow: 0 0 5px #28a745; }
+    100% { background-color: #32cd32; box-shadow: 0 0 15px #32cd32; }
+}
+
+/* Buttons */
+#reset, .newgame {
+    padding: 0.65rem;
+    font-size: 1rem;
+    border-radius: 0.95rem;
+    border: none;
+    font-weight: bold;
+    background: linear-gradient(45deg, #a3aa8b, #313132);
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+#reset:hover, .newgame:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #aebd90, #5C60D6);
+}
+
+/* Hide Elements */
+.hide {
+    display: none;
+}
+
+/* Winning Message Box */
+.winingMsg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: popUp 0.5s ease-in-out forwards;
+}
+
+@keyframes popUp {
+    from { transform: translate(-50%, -50%) scale(0.5); opacity: 0; }
+    to { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+}
