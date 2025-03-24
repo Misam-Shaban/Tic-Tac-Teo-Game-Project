@@ -1,4 +1,4 @@
- Tic-Tac-Toe Game
+ <h1>Tic-Tac-Toe Game</h1>
 
 A simple yet interactive Tic-Tac-Toe game built using **HTML, CSS, and JavaScript** with exciting animations and sound effects.
 
