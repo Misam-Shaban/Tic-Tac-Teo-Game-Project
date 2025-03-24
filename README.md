@@ -1,4 +1,6 @@
- <h1>Tic-Tac-Toe Game</h1>
+ <h1>Author</h1>
+<h4>Misam Shaban</h4>
+<h3>Tic-Tac-Toe Game</h3>
 
 A simple yet interactive Tic-Tac-Toe game built using **HTML, CSS, and JavaScript** with exciting animations and sound effects.
 
